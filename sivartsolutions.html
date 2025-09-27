@@ -1,0 +1,1839 @@
+<!DOCTYPE html>
+<!-- saved from url=(0030)https://sivartsolutions.co.za/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sivart Solutions (PTY)LTD |Accounting|Marketing|Tech Solutions|Business Development</title>
+    <link rel="icon" type="image/png" href="./sivartsolutions_files/2.2.png">
+    <link rel="stylesheet" href="./sivartsolutions_files/all.min.css">
+    <link href="./sivartsolutions_files/css2" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #5b5946;
+            --primary-dark: #ffffff;
+
+            --secondary: #EEEEEE;
+            --accent: #1E1E1E;
+            --light: #f8fafc;
+            --dark: #1E1E1E;
+            --gray: #666666;
+            --light-gray: #CCCCCC;
+            --card-bg: #FFFFFF;
+            --section-bg: #F8F8F8;
+            --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: var(--dark);
+            background-color: #FFFFFF;
+            line-height: 1.6;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            border: 2px solid var(--primary);
+            cursor: pointer;
+            font-size: 1rem;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .btn:hover {
+            < !--background: transparent;
+            -->color: var(--primary);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+        }
+
+        .btn::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--primary);
+            z-index: -1;
+            border-radius: 50px;
+            opacity: 0.7;
+            filter: blur(10px);
+            transition: var(--transition);
+        }
+
+        .btn:hover::after {
+            opacity: 0;
+        }
+
+        .btn-secondary {
+            < !--background: transparent;
+            -->color: #ffffff;
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn-small {
+            padding: 10px 20px;
+            font-size: 0.9rem;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--dark);
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--primary);
+            border-radius: 2px;
+            box-shadow: 0 0 15px var(--primary-glow);
+        }
+
+        .section-title p {
+            color: var(--gray);
+            max-width: 700px;
+            margin: 30px auto 0;
+            font-size: 1.1rem;
+        }
+
+        /* Header Styles */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 15px 0;
+            transition: var(--transition);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            height: 50px;
+        }
+
+        .logo-img {
+            height: 100%;
+
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            align-items: center;
+        }
+
+        nav ul li {
+            margin-left: 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            font-size: 1rem;
+            transition: var(--transition);
+            position: relative;
+            padding: 5px 0;
+        }
+
+        nav ul li a:hover {
+            color: var(--primary);
+        }
+
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: var(--transition);
+        }
+
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+
+        .nav-btn {
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: var(--transition);
+            text-align: center;
+            border: 2px solid var(--primary);
+            margin: 0 5px;
+        }
+
+        .support-btn {
+            background: transparent;
+            color: var(--primary);
+        }
+
+        .support-btn:hover {
+            background: rgba(107, 105, 105, 0.1);
+            transform: translateY(-3px);
+            box-shadow: 0 0 15px var(--primary-glow);
+        }
+
+        .login-btn {
+            background: var(--primary);
+            color: white;
+        }
+
+        .login-btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px var(--primary-glow);
+        }
+
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+            color: var(--dark);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 180px 0 100px;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                url('photos/325229/home.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, transparent, rgba(0, 0, 0, 0.9)),
+                radial-gradient(circle, var(--primary-glow) 0%, transparent 70%);
+            opacity: 0.3;
+            z-index: 0;
+        }
+
+        .hero-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+            z-index: 2;
+        }
+
+        .hero-text {
+            flex: 1;
+            max-width: 600px;
+            text-align: center;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-text h1 {
+            font-size: 3.1rem;
+            line-height: 1.3;
+            margin-bottom: 20px;
+            color: white;
+            animation: fadeInDown 1s ease;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-text h1 span {
+            color: var(--primary);
+            text-shadow: 0 0 15px var(--primary-glow);
+            display: block;
+            margin-top: 10px;
+            font-size: 3.3rem;
+        }
+
+        .hero-text p {
+            font-size: 1.2rem;
+            color: var(--secondary);
+            margin: 0 auto 30px;
+            max-width: 700px;
+            text-align: center;
+            animation: fadeInUp 1s ease 0.2s both;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 30px;
+            margin-bottom: 40px;
+            animation: fadeInUp 1s ease 0.4s both;
+        }
+
+        .coverage-check {
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 50px;
+            padding: 10px;
+            max-width: 600px;
+            margin: 0 auto;
+            animation: fadeInUp 1s ease 0.6s both;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 0 15px rgba(88, 84, 82, 0.3);
+        }
+
+        .coverage-check form {
+            display: flex;
+            gap: 10px;
+        }
+
+        .coverage-check input {
+            flex: 1;
+            padding: 15px 25px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            background: rgba(255, 255, 255, 0.9);
+        }
+
+        .coverage-check button {
+            padding: 15px 30px;
+            border: none;
+            border-radius: 50px;
+            background: var(--primary);
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .coverage-check button:hover {
+            background: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 0 15px var(--primary-glow);
+        }
+
+        .mascot-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            animation: fadeInRight 1s ease;
+        }
+
+        .mascot {
+            max-width: 350px;
+            animation: float 4s ease-in-out infinite;
+            filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 80px;
+            flex-wrap: wrap;
+            animation: fadeInUp 1s ease 0.8s both;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 20px;
+            transition: var(--transition);
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .stat-item:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 25px var(--primary-glow);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            font-family: 'Poppins', sans-serif;
+            color: #FFFFFF;
+            text-shadow: 0 0 10px var(--primary-glow);
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            color: var(--secondary);
+        }
+
+        /* Services Section */
+        .services {
+            padding: 100px 0;
+            background: var(--section-bg);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .service-card {
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 40px 30px;
+            text-align: center;
+            transition: var(--transition);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--light-gray);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(255, 255, 255, 0.1);
+            border-color: #5b5946;
+        }
+
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            background: rgba(105, 102, 100, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            transition: var(--transition);
+        }
+
+        .service-card:hover .service-icon {
+            background: var(--primary);
+            transform: scale(1.1);
+            box-shadow: 0 0 20px var(--primary-glow);
+        }
+
+        .service-icon i {
+            font-size: 2rem;
+            color: var(--primary);
+            transition: var(--transition);
+        }
+
+        .service-card:hover .service-icon i {
+            color: white;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+
+        .service-card ul {
+            list-style-type: none;
+            text-align: left;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .service-card ul li {
+            padding: 8px 0;
+            color: var(--gray);
+            border-bottom: 1px dashed var(--light-gray);
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .service-card ul li:last-child {
+            border-bottom: none;
+        }
+
+        .service-card ul li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        .domain-check {
+            margin-top: 20px;
+            padding: 15px;
+            background: rgba(239, 91, 12, 0.05);
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .domain-check h4 {
+            margin-bottom: 10px;
+            color: var(--dark);
+        }
+
+        .domain-check form {
+            display: flex;
+            gap: 10px;
+        }
+
+        .domain-check input {
+            flex: 1;
+            padding: 12px 15px;
+            border: 1px solid var(--light-gray);
+            border-radius: 50px;
+            font-size: 0.9rem;
+        }
+
+        .domain-check button {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 50px;
+            background: var(--primary);
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .domain-check button:hover {
+            background: var(--primary-dark);
+            box-shadow: 0 0 10px var(--primary-glow);
+        }
+
+        /* Why Choose Section */
+        .why-choose {
+            padding: 100px 0;
+            background: white;
+            position: relative;
+        }
+
+        .why-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('photos/3183150/pexels-photo-3183150.jpeg') no-repeat center center/cover;
+            opacity: 0.1;
+            z-index: 0;
+        }
+
+        .why-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .why-card {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            transition: var(--transition);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--light-gray);
+            backdrop-filter: blur(5px);
+        }
+
+        .why-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(255, 255, 255, 0.1);
+        }
+
+        .why-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(95, 90, 88, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            transition: var(--transition);
+        }
+
+        .why-card:hover .why-icon {
+            background: var(--primary);
+            transform: scale(1.1);
+            box-shadow: 0 0 20px var(--primary-glow);
+        }
+
+        .why-icon i {
+            font-size: 1.5rem;
+            color: var(--primary);
+            transition: var(--transition);
+        }
+
+        .why-card:hover .why-icon i {
+            color: white;
+        }
+
+        .why-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+
+        .why-card p {
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 100px 0;
+            background: var(--section-bg);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .testimonial-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--light-gray);
+            position: relative;
+            transition: var(--transition);
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(255, 255, 255, 0.15);
+        }
+
+        .testimonial-card::before {
+            content: "" ";
+ position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 5rem;
+            color: rgba(239, 91, 12, 0.1);
+            font-family: serif;
+            line-height: 1;
+        }
+
+        .testimonial-content {
+            margin-top: 30px;
+            color: var(--gray);
+            font-style: italic;
+            position: relative;
+            z-index: 2;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            margin-top: 25px;
+        }
+
+        .author-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: var(--light-gray);
+            margin-right: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .author-info h4 {
+            color: var(--dark);
+            margin-bottom: 5px;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 100px 0;
+            background: var(--section-bg);
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 50px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .contact-item {
+            display: flex;
+            gap: 20px;
+        }
+
+        .contact-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            transition: var(--transition);
+            box-shadow: 0 0 15px var(--primary-glow);
+        }
+
+        .contact-icon:hover {
+            transform: rotate(10deg) scale(1.1);
+        }
+
+        .contact-icon i {
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .contact-details h4 {
+            color: var(--dark);
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+
+        .contact-details p,
+        .contact-details a {
+            color: var(--gray);
+            text-decoration: none;
+            transition: var(--transition);
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .contact-details a:hover {
+            color: var(--primary);
+        }
+
+        .contact-form {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid var(--light-gray);
+            border-radius: 8px;
+            font-family: 'Roboto', sans-serif;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(239, 91, 12, 0.2);
+        }
+
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 70px 0 30px;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .footer-col h3 {
+            font-size: 1.4rem;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--primary);
+        }
+
+        .footer-col p {
+            color: #cbd5e1;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background: var(--primary);
+            transform: translateY(-5px);
+            box-shadow: 0 0 10px var(--primary-glow);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 15px;
+        }
+
+        .footer-links a {
+            color: #cbd5e1;
+            text-decoration: none;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary);
+        }
+
+        .footer-links a i {
+            font-size: 0.8rem;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #94a3b8;
+            font-size: 0.9rem;
+        }
+
+        .copyright a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        /* ...aboutus css... */
+        .aboutus-flex {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .aboutus-img {
+            flex: 1;
+            min-width: 660px;
+        }
+
+        .aboutus-img img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        .aboutus-text {
+            flex: 2;
+            min-width: 300px;
+        }
+
+        .aboutus-text h3 {
+            margin-bottom: 18px;
+            color: var(--primary);
+        }
+
+        .aboutus-text ul {
+            margin-bottom: 18px;
+            color: var(--gray);
+            list-style: disc inside;
+        }
+
+        @media (max-width: 900px) {
+            .aboutus-flex {
+                flex-direction: column;
+                gap: 25px;
+                text-align: center;
+            }
+
+            .aboutus-img,
+            .aboutus-text {
+                min-width: 0;
+            }
+        }
+
+        /*
+        
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .hero-text h1 {
+                font-size: 2.8rem;
+            }
+
+            .hero-text h1 span {
+                font-size: 3rem;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .hero-content {
+                flex-direction: column;
+            }
+
+            .hero-text {
+                margin-bottom: 50px;
+            }
+
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-text h1 span {
+                font-size: 2.7rem;
+            }
+
+            .hero-stats {
+                margin-top: 50px;
+            }
+
+            .mascot {
+                max-width: 300px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+                z-index: 1001;
+            }
+
+            nav {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 70%;
+                height: 100vh;
+                background: white;
+                box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+                transition: var(--transition);
+                z-index: 1000;
+                padding-top: 80px;
+            }
+
+            nav.active {
+                right: 0;
+            }
+
+            nav ul {
+                flex-direction: column;
+                padding: 20px;
+            }
+
+            nav ul li {
+                margin: 15px 0;
+                width: 100%;
+            }
+
+            .hero-text h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero-text h1 span {
+                font-size: 2.4rem;
+            }
+
+            .section-title h2 {
+                font-size: 2rem;
+            }
+
+            .service-card {
+                padding: 30px 20px;
+            }
+
+            .logo {
+                height: 40px;
+            }
+
+            .hero-btns {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .hero-stats {
+                gap: 20px;
+            }
+
+            .mascot {
+                max-width: 250px;
+            }
+
+            .contact-container {
+                gap: 30px;
+            }
+
+            .contact-item {
+                gap: 15px;
+            }
+
+            .contact-icon {
+                width: 50px;
+                height: 50px;
+            }
+
+            .contact-form {
+                padding: 30px;
+            }
+
+            .coverage-check form {
+                flex-direction: column;
+            }
+
+            .domain-check form {
+                flex-direction: column;
+            }
+
+            .nav-buttons {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                margin-top: 20px;
+            }
+
+            .nav-btn {
+                margin: 5px 0;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero {
+                padding: 150px 0 80px;
+            }
+
+            .hero-text h1 {
+                font-size: 1.9rem;
+            }
+
+            .hero-text h1 span {
+                font-size: 2.1rem;
+            }
+
+            .hero-text p {
+                font-size: 1rem;
+            }
+
+            .stat-number {
+                font-size: 2rem;
+            }
+
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+
+            .section-title p {
+                font-size: 1rem;
+            }
+
+            .btn {
+                padding: 12px 24px;
+                width: 100%;
+                text-align: center;
+            }
+
+            .hero-btns {
+                gap: 15px;
+            }
+
+            .testimonial-card {
+                padding: 20px;
+            }
+
+            .author-avatar {
+                width: 50px;
+                height: 50px;
+                font-size: 1.2rem;
+            }
+
+            .footer-container {
+                gap: 30px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-content {
+                padding: 0 10px;
+            }
+
+            .hero-text h1 {
+                font-size: 1.7rem;
+            }
+
+            .hero-text h1 span {
+                font-size: 1.9rem;
+            }
+
+            .mascot {
+                max-width: 200px;
+            }
+
+            .hero-stats {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .stat-item {
+                padding: 15px;
+            }
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 50px;
+            /* Adjust bottom padding here */
+            right: 30px;
+            /* Adjust right padding here */
+            background-color: #25D366;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+        }
+
+        .whatsapp-float i {
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body data-new-gr-c-s-check-loaded="14.1121.0" data-gr-ext-installed="">
+    <!-- Header -->
+    <header style="padding: 10px 0px; box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 10px;">
+        <div class="container header-container">
+            <a href="https://sivartsolutions.co.za/#home" class="logo">
+                <img src="./sivartsolutions_files/sivart.png" alt="Sivart Solutions Logo" class="logo-img">
+            </a>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="https://sivartsolutions.co.za/#home">Home</a></li>
+                    <li><a href="https://sivartsolutions.co.za/#aboutus">About Us</a></li>
+                    <li><a href="https://sivartsolutions.co.za/#services">Services</a></li>
+                    <li><a href="https://sivartsolutions.co.za/#why">Why Us</a></li>
+                    <li><a href="https://sivartsolutions.co.za/#testimonials">Testimonials</a></li>
+                    <li><a href="https://sivartsolutions.co.za/#contact">Contact</a></li>
+                    <li class="nav-buttons">
+                        <a href="https://sivartsolutions.co.za/#contact" class="nav-btn support-btn" target="_blank">
+                            <i class="fas fa-headset"></i> SUPPORT
+                        </a>
+
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1>Tailored Solutions for all your business needs</h1>
+                <p>Sivart Solutions delivers integrated, future-ready solutions for businesses of all sizes. From core
+                    infrastructure to cutting-edge innovation.</p>
+                <div class="hero-btns">
+                    <a href="https://sivartsolutions.co.za/#services" class="btn">Explore Services</a>
+                    <a href="https://sivartsolutions.co.za/#contact" class="btn btn-secondary">Contact Us</a>
+                </div>
+
+
+            </div>
+
+            <div class="mascot-container">
+                <img src="./sivartsolutions_files/2.2.png" alt="A2Z Mascot" class="mascot">
+            </div>
+        </div>
+
+        <div class="hero-stats">
+            <div class="stat-item">
+                <div class="stat-number">99.9%</div>
+                <div class="stat-label">Satistfied Clients</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">10+</div>
+                <div class="stat-label">Years Experience</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">50+</div>
+                <div class="stat-label">Business Clients</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="why-choose" id="aboutus">
+        <div class="aboutus-bg"></div>
+        <div class="container why-content">
+            <div class="section-title">
+                <h2>About Us?</h2>
+                <p>Tailored Business Solutions under one Partner</p>
+            </div>
+            <div class="aboutus-flex">
+                <div class="aboutus-img">
+                    <img src="./sivartsolutions_files/about.jpg" alt="Sivart Solutions">
+                </div>
+                <div class="aboutus-text">
+                    <h3>Who We Are</h3>
+                    <p>
+                        At <strong>Sivart solutions</strong> , we believe every business is unique and your solutions
+                        should be too.
+                        With over a decade of experience and a 99.9% client satisfaction rate, we’ve proudly become one
+                        of South Africa’s
+                        leading providers of <strong>tailored business solutions.</strong>
+                    </p>
+                    <br>
+                    <p>From finance to marketing, IT to business development, we deliver <strong>integrated,
+                            future-ready services</strong> that help streamline
+                        operations, enhance productivity, and unlock growth potential. Whether you're a startup, SME, or
+                        enterprise, our expert
+                        team is committed to empowering your journey with <strong>reliable, scalable, and innovative
+                            solutions.</strong>
+                    </p>
+                    <ul>
+                        <li>Everything your business needs under one trusted partner</li>
+                        <li>Solutions built for South African markets</li>
+                        <li>Stay ahead with future-ready systems and technologies</li>
+                        <li>Subscription and payment models to suit your budget</li>
+                    </ul>
+                    <p>
+                        Trusted by 50+ businesses nationwide, Sivart Solutions is here to help you focus on what matters
+                        most, growth and success.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Services</h2>
+                <p>Comprehensive solutions tailored to your unique business needs</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h3>Finance Solutions</h3>
+                    <ul>
+                        <li>Financial Systems Intergration</li>
+                        <li>Bookkeeping and Reporting</li>
+                        <li>Taxation and Complience</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+                    <h3>Marketing Solutions</h3>
+                    <ul>
+                        <li>Digital campaign strategy and execution</li>
+                        <li>Brand identity and content creation</li>
+                        <li>Social media and analytics integration</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3>Business Development</h3>
+                    <ul>
+                        <li>Strategic growth planning</li>
+                        <li>Partnership and lead generation system</li>
+                        <li>Sales pipeline management tools</li>
+                    </ul>
+
+                    <!-- Domain Availability Check -->
+                    <!-- <div class="domain-check">
+                        <h4>Check Domain Availability</h4>
+                        <form>
+                            <input type="text" placeholder="yourdomain.com">
+                            <button type="button">Search</button>
+                        </form>
+                    </div>-->
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>IT Solutions</h3>
+                    <ul>
+                        <li>Enterprise-grade networking equipment</li>
+                        <li>Secure network design and implementation</li>
+                        <li>Hardware procurement and maintenance</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Our Systems</h3>
+                    <ul>
+                        <li><a href="https://marketing.sivartsolutions.co.za/" target="_blank" style="color: rgb(48, 190, 250); text-decoration: none;">Sivart Marketing &amp; Coms</a>
+                        </li>
+                        <li><a href="https://sivartsolutions.co.za/URL-for-SalesBot-CRM" target="_blank" style="color: rgb(48, 190, 250); text-decoration: none;">Digital Business Card</a></li>
+                        <li><a href="https://work.sivartsolutions.co.za/" target="_blank" style="color: rgb(48, 190, 250); text-decoration: none;">Sivart Work Space</a></li>
+                        <br>
+                        <div style="text-align: center; margin-top: 10px;">
+                            <a href="https://sivartsolutions.co.za/URL-for-more-systems" target="_blank" class="btn btn-secondary">See More
+                                Systems</a>
+                        </div>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Consultant</h3>
+                    <ul>
+                        <li>Operational efficiency analysis</li>
+                        <li>Tailored business advisory sessions</li>
+                        <li>Implementation oversight and training support</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section> 
+
+    <!-- Why Choose Section -->
+    <section class="why-choose" id="why">
+        <div class="why-bg"></div>
+        <div class="container why-content">
+            <div class="section-title">
+                <h2>Why Choose Us?</h2>
+                <p>Discover the advantages of South Africa's premier provider</p>
+            </div>
+
+            <div class="why-grid">
+                <div class="why-card">
+                    <div class="why-icon">
+                        <i class="fas fa-link"></i>
+                    </div>
+                    <h3>End-to-End Solutions</h3>
+                    <p>Comprehensive services from a single trusted partner</p>
+                </div>
+
+                <div class="why-card">
+                    <div class="why-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Local Expertise</h3>
+                    <p>Solutions optimized for South African businesses</p>
+                </div>
+
+                <div class="why-card">
+                    <div class="why-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Future-Ready</h3>
+                    <p>Innovation at the forefront of technology</p>
+                </div>
+
+                <div class="why-card">
+                    <div class="why-icon">
+                        <i class="fas fa-hand-holding-usd"></i>
+                    </div>
+                    <h3>Flexible Options</h3>
+                    <p>Subscription and payment models to suit your budget</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>Client Testimonials</h2>
+                <p>What our clients say about our solutions</p>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>Sivart Solutions truly understood our vision. The identity they crafted feels like us. Clean,
+                            professional, and confident. We’re proud to have partnered with them.</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">F</div>
+                        <div class="author-info">
+                            <h4><a href="https://www.focusonecapital.co.za/" target="_blank" rel="noopener noreferrer" style="color: black; text-decoration: none;">FocusOneCapital</a></h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"Sivart Solutions! Got us—heart and soul. Bold, vibrant, and totally us. We loved every
+                            moment of bringing Destined2Lead to life together!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">D</div>
+                        <div class="author-info">
+                            <h4><a href="https://destined2lead.co.za/" target="_blank" rel="noopener noreferrer" style="color: black; text-decoration: none;">Destined2Lead</a></h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"The team brought clarity and direction to our brand. The strategy was sharp, the proposal
+                            compelling—exactly what TipOne SA needed to grow with purpose."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">T</div>
+                        <div class="author-info">
+                            <h4><a href="https://sivartsolutions.co.za/docs/TipOne.pdf" target="_blank" rel="noopener noreferrer" style="color: black; text-decoration: none;">TipOne SA</a></h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Get In Touch</h2>
+                <p>Connect with our expert staff</p>
+            </div>
+
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Sales Inquiries</h4>
+                            <a href="mailto:info@sivartsolutions.co.za">sales@sivartsolutions.co.za</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Phone Number</h4>
+                            <a href="tel:+27685164724">+27 68 516 4724</a>
+                        <a href="tel:+263787288899">+263 78 728 8899</a></div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>For More Info</h4>
+                            <a href="mailto:info@sivartsolutions.co.za">info@sivartsolutions.co.za</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Working Hours</h4>
+                            <p>Monday - Friday: 8AM - 5PM</p>
+                            <p>Saturday: 9AM - 1PM</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    
+                    <form method="POST" action="https://sivartsolutions.co.za/" abineguid="4C3AFDD6AAD344139A8F412F0E42DCB1">
+                        <div class="form-group">
+                            <label for="name">Full Name <span class="required">*</span></label>
+                            <input type="text" id="name" name="name" placeholder="Enter your name" required="" value="">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address <span class="required">*</span></label>
+                            <input type="email" id="email" name="email" placeholder="Enter your email" required="" value="">
+                        <div id="pwm-inline-icon-97168" class="pwm-field-icon" style="position: absolute !important; width: 18px !important; height: 18px !important; min-height: 0px !important; min-width: 0px !important; z-index: 2147483645 !important; box-shadow: none !important; box-sizing: content-box !important; background: none !important; border: none !important; padding: 0px !important; cursor: pointer !important; outline: none !important; margin-top: -34.4002px; margin-left: 219.012px;"><svg style="display: inline-block !important; width: 16px !important; height: 16px !important; fill: rgb(230, 0, 23) !important; margin-top: 0.5px !important; position: absolute !important; top: 0px !important; left: 0px !important;" viewBox="0 0 40 64"><g><path d="m20,28.12a33.78,33.78 0 0 1 13.36,2.74a22.18,22.18 0 0 1 0.64,5.32c0,9.43 -5.66,17.81 -14,20.94c-8.34,-3.13 -14,-11.51 -14,-20.94a22.2,22.2 0 0 1 0.64,-5.32a33.78,33.78 0 0 1 13.36,-2.74m0,-28.12c-8.82,0 -14,7.36 -14,16.41l0,5.16c2,-1.2 2,-1.49 5,-2.08l0,-3.08c0,-6.21 2.9,-11.41 8.81,-11.41l0.19,0c6.6,0 9,4.77 9,11.41l0,3.08c3,0.58 3,0.88 5,2.08l0,-5.16c0,-9 -5.18,-16.41 -14,-16.41l0,0zm0,22c-6.39,0 -12.77,0.67 -18.47,4a31.6,31.6 0 0 0 -1.53,9.74c0,13.64 8.52,25 20,28.26c11.48,-3.27 20,-14.63 20,-28.26a31.66,31.66 0 0 0 -1.54,-9.77c-5.69,-3.3 -12.08,-4 -18.47,-4l0,0l0.01,0.03z"></path><path d="m21.23,39.5a2.81,2.81 0 0 0 1.77,-2.59a2.94,2.94 0 0 0 -3,-2.93a3,3 0 0 0 -3,3a2.66,2.66 0 0 0 1.77,2.48l-1.77,4.54l6,0l-1.77,-4.5z"></path></g></svg></div></div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" placeholder="What is this regarding?" value="">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message <span class="required">*</span></label>
+                            <textarea id="message" name="message" placeholder="How can we help you?" required=""></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/27685164724" target="_blank" class="whatsapp-float">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+
+    <a href="https://wa.me/263787288899" target="_blank" class="whatsapp-float">
+        <i class="fab fa-whatsapp"></i>
+    </a><!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h3>Sivart Solutions</h3>
+                    <p>Your complete solutions partner offering integrated, future-ready services for businesses of all
+                        sizes.</p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/sivartsolutions/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/sivartsolutions/" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://https//www.instagram.com/sivartsolutions/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/sivartsolutions/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Our Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://sivartsolutions.co.za/#services"><i class="fas fa-chevron-right"></i> Finance Solutions</a></li>
+                        <li><a href="https://sivartsolutions.co.za/#services"><i class="fas fa-chevron-right"></i> Marketing Solutions</a></li>
+                        <li><a href="https://sivartsolutions.co.za/#services"><i class="fas fa-chevron-right"></i> Business Development</a></li>
+                        <li><a href="https://sivartsolutions.co.za/#services"><i class="fas fa-chevron-right"></i> IT Solutions</a></li>
+                        <li><a href="https://sivartsolutions.co.za/#services"><i class="fas fa-chevron-right"></i> Systems Development</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://sivartsolutions.co.za/#home"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="https://sivartsolutions.co.za/#aboutus"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                        <li><a href="https://sivartsolutions.co.za/#services"><i class="fas fa-chevron-right"></i> Services</a></li>
+                        <li><a href="https://sivartsolutions.co.za/#why"><i class="fas fa-chevron-right"></i> Why Choose Us</a></li>
+                        <li><a href="https://sivartsolutions.co.za/#testimonials"><i class="fas fa-chevron-right"></i> Testimonials</a></li>
+                        <li><a href="https://sivartsolutions.co.za/#contact"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                        <li><a href="https://sivartsolutions.co.za/#contact"><i class="fas fa-headset"></i> Support</a></li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>© 2025 Sivart Solutions. All Rights Reserved. | Website: <a href="https://www.sivartsolutions.co.za/">www.sivartsolutions.co.za</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script data-cfasync="false" src="./sivartsolutions_files/email-decode.min.js.download"></script>
+    <script>
+        // Header scroll effect
+        window.addEventListener('scroll', function () {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.style.padding = '10px 0';
+                header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+            } else {
+                header.style.padding = '15px 0';
+                header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.05)';
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+
+                // Close mobile menu after clicking
+                document.querySelector('nav').classList.remove('active');
+            });
+        });
+
+        // Mobile menu toggle
+        document.querySelector('.menu-toggle').addEventListener('click', function () {
+            document.querySelector('nav').classList.toggle('active');
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function (event) {
+            const menu = document.querySelector('nav');
+            const toggle = document.querySelector('.menu-toggle');
+
+            if (!menu.contains(event.target) && !toggle.contains(event.target) && menu.classList.contains('active')) {
+                menu.classList.remove('active');
+            }
+        });
+
+        // Coverage check functionality
+        document.querySelector('.coverage-check button').addEventListener('click', function () {
+            const address = document.querySelector('.coverage-check input').value;
+            if (address) {
+                // Simulate API call with loading
+                const button = this;
+                const originalText = button.textContent;
+                button.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Checking...';
+
+                setTimeout(() => {
+                    button.innerHTML = originalText;
+                    // Simulate coverage check result
+                    alert(`Network coverage is available at ${address}!\nComplete the contact form for one of our reps to contact you.`);
+                }, 1500);
+            } else {
+                alert('Please enter an address or postal code');
+            }
+        });
+
+        // Domain check functionality
+        document.querySelector('.domain-check button').addEventListener('click', function () {
+            const domainInput = document.querySelector('.domain-check input');
+            const domain = domainInput.value;
+
+            if (domain) {
+                // Simulate API call with loading
+                const button = this;
+                const originalText = button.textContent;
+                button.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Searching...';
+
+                setTimeout(() => {
+                    button.innerHTML = originalText;
+                    // Simulate domain check with random availability
+                    const isAvailable = Math.random() > 0.5;
+                    if (isAvailable) {
+                        alert(`Congratulations! ${domain} is available for registration, fill out the contact form for one of our reps to call you back!`);
+                    } else {
+                        alert(`Sorry, ${domain} is already registered. Try another domain.`);
+                    }
+                }, 1500);
+            } else {
+                alert('Please enter a domain name');
+            }
+        });
+
+        // Animate elements when they enter the viewport
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.service-card, .why-card, .testimonial-card').forEach(card => {
+            observer.observe(card);
+        });
+    </script>
+    <script defer="" src="./sivartsolutions_files/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon="{&quot;version&quot;:&quot;2024.11.0&quot;,&quot;token&quot;:&quot;f92fef0a40f24e13ab697bee638b0d82&quot;,&quot;r&quot;:1,&quot;server_timing&quot;:{&quot;name&quot;:{&quot;cfCacheStatus&quot;:true,&quot;cfEdge&quot;:true,&quot;cfExtPri&quot;:true,&quot;cfL4&quot;:true,&quot;cfOrigin&quot;:true,&quot;cfSpeedBrain&quot;:true},&quot;location_startswith&quot;:null}}" crossorigin="anonymous"></script>
+
+
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+      div.grammarly-desktop-integration {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select:none;
+        user-select:none;
+      }
+
+      div.grammarly-desktop-integration:before {
+        content: attr(data-content);
+      }
+    </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{&quot;mode&quot;:&quot;limited&quot;,&quot;isActive&quot;:false,&quot;isUserDisabled&quot;:false}"></div></template></grammarly-desktop-integration><div class="abineContentPanel" style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: transparent !important; margin: 0px !important; padding: 0px !important; display: none; opacity: 1 !important; z-index: 2147483647 !important; position: absolute !important; top: 20px !important; right: 20px !important; overflow: hidden !important; border-width: 0px !important; visibility: visible !important;"><iframe class="abineContentFrame" width="310px" allowtransparency="true" frameborder="0" height="0px" scrolling="no" src="./sivartsolutions_files/inlineForm.html" id="abine59535855doNotRemove" position="undefined" style="display:block !important;position:relative !important;background:transparent !important;border-width:0px !important;left:0px !important;top:0px !important;visibility:visible !important;opacity:1 !important;filter:alpha(opacity:100) !important;margin:0 !important;padding:0 !important;height:0px !important;width:310px"></iframe></div></html>
